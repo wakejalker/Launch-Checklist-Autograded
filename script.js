@@ -4,13 +4,23 @@ const { formSubmission } = require("./scriptHelper");
 
     window.addEventListener("load", function() {
     //  get form
-    const form = document.querySelector('form[data-testid="testForm"]');
+    const form = document.querySelector("form");
 
     // add event listener for submission
     form.addEventListener('submit', function(event) {
-        event.preventDefault();
+        let pilot = this.document.getElementsByName("pilotName")[0].value;
+        let copilot = this.document.getElementsByName("copilotName")[0].    value;
+        let fuelLevel = this.document.getElementsByName("fuelLevel")[0].value;
+        let cargoLevel = this.document.getElementsByName("cargoMass")[0].value;
+        let list = this.document.getElementsById("faultyItems");
 
-        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
+
+        if (
+        !formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
+        ) {
+            this.event.preventDefault();
+        }
+
     });
 
 
