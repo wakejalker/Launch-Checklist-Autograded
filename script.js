@@ -1,6 +1,6 @@
 // const { formSubmission } = require("./scriptHelper");
-
-const { addDestinationInfo } = require("./scriptHelper");
+// const { addDestinationInfo } = require("./scriptHelper");
+// STOP IT VSCODE YOU KEEP MAKING ME THINK I BROKE IT 
 
 // Write your JavaScript code here!
 window.addEventListener("load", function() {
@@ -43,9 +43,9 @@ window.addEventListener("load", function() {
             selectPlanet["diameter"],
             selectPlanet["star"],
             selectPlanet["distance"],
-            selectPlanet["image"],
-            selectPlanet["moons"]
+            selectPlanet["moons"],
+            selectPlanet["image"]
         );
-    })
+    });
     
 });
